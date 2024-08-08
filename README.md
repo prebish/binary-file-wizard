@@ -25,8 +25,6 @@ javac ./src/*.java
 
 ## Usage
 
-### Running the program
-
 This is the baseline of what you'll use to run the program. Try running it yourself.  
 Note that the usage will print out when there are insufficient arguments.
 
@@ -38,19 +36,24 @@ java -cp build BinFileWiz
 
 #### The output will be displayed in the console
 ```bash
-java -cp build BinFileWiz -r text.txt 
+java -cp build BinFileWiz -r binary.dat
 ```
 
 #### Optionally, you can include a name of a file to place the output
 ```bash
-java -cp build BinFileWiz -r text.txt  
+java -cp build BinFileWiz -r binary.dat  binary_to_text.txt
 ```
 
 ### Writing
+
+#### The output will be placed in a file named `output.dat` by default
 ```bash
-java
+java -cp build BinFileWiz -w file.txt
 ```
 
-### Writing
+#### Optionally, a custom output file name can be included
+```bash
+java -cp build BinFileWiz -w file.txt text_to_binary.dat
+```
 
 

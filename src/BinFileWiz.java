@@ -14,7 +14,7 @@ public class BinFileWiz {
     public static void main(String[] args) throws FileNotFoundException, IOException {
         // Check length of args
         if ( args.length < 2) {
-            System.out.println("Usage: java WritingBinaryFiles <operation> <input_file_path> <output_file>");
+            System.out.println("Usage: java BinFileWiz <operation> <input_file_path> <output_file>");
             return;
         }
 
@@ -31,54 +31,54 @@ public class BinFileWiz {
             System.out.println("Invalid operation. Use -w, -write or -r, -read.");
         }
     }
-    
+
     public static void writeData(String inputFilename, String outputFilename) throws FileNotFoundException, IOException {
-        System.out.println("Reading from: " + inputFilename);
         BufferedReader br = new BufferedReader(new FileReader(inputFilename));
-        
+
         if (outputFilename == null) outputFilename = "output.dat";
-        System.out.println("Writing to: " + outputFilename);
-        BufferedWriter bw = new BufferedWriter(new FileWriter(outputFilename));
-    
+        FileOutputStream fos = new FileOutputStream(outputFilename);
+        DataOutputStream dos = new DataOutputStream(fos);
+
         String line;
         while ((line = br.readLine()) != null) {
-            System.out.println("Writing line: " + line);
-            bw.write(line);
-            bw.newLine();
+            dos.writeUTF(line);
         }
-    
+
         br.close();
-        bw.close();
+        dos.close();
     }
-    
+
     public static void readData(String inputFilename, String outputFilename) throws FileNotFoundException, IOException {
         System.out.println("Reading from: " + inputFilename);
-        BufferedReader br = new BufferedReader(new FileReader(inputFilename));
+        FileInputStream fis = new FileInputStream(inputFilename);
+        DataInputStream dis = new DataInputStream(fis);
         BufferedWriter bw = null;
-    
+
         if (outputFilename != null) {
             bw = new BufferedWriter(new FileWriter(outputFilename));
-            System.out.println("Writing to: " + outputFilename);
         }
-    
+
         try {
-            String line;
-            while ((line = br.readLine()) != null) {
-                String filteredLine = line.replaceAll("[^a-zA-Z0-9 ]", "");
-                System.out.println("Read line: " + filteredLine);
-                if (outputFilename == null) {
-                    System.out.println(filteredLine);
-                } else {
-                    bw.write(filteredLine);
-                    bw.newLine();
+            boolean endOfFile = false;
+            while (!endOfFile) {
+                try {
+                    String line = dis.readUTF();
+                    String filteredLine = line.replaceAll("[^a-zA-Z0-9 ]", "");
+                    if (outputFilename == null) {
+                        System.out.println(filteredLine);
+                    } else {
+                        bw.write(filteredLine);
+                        bw.newLine();
+                    }
+                } catch (EOFException e) {
+                    endOfFile = true;
                 }
             }
         } finally {
-            br.close();
+            dis.close();
             if (bw != null) {
                 bw.close();
             }
         }
     }
-    
 }
