@@ -4,9 +4,9 @@ A simple command line Java program that can read most binary files, or turn a fi
 
 ## Table of Contents
 
-- [Installation & Setup](#installation-&-setup)
-    1. [Clone the Repository](#clone-the-repository)
-    2. [Compile the Program](#compile-the-program)
+- [Installation & Setup](#installation--setup)
+    1. [Clone the Repository](#1-clone-the-repository)
+    2. [Compile the Program](#2-compile-the-program)
 - [Usage](#usage)
     - [Reading](#reading)
         - [Output to Console](#the-output-will-be-displayed-in-the-console)
@@ -14,6 +14,7 @@ A simple command line Java program that can read most binary files, or turn a fi
     - [Writing](#writing)
         - [No Output File Specified](#the-output-will-be-placed-in-a-file-named-outputdat-by-default)
         - [Output File Specified](#optionally-a-custom-output-file-name-can-be-included)
+- [License](#license)
 
 ## Installation & Setup
 
@@ -63,4 +64,7 @@ java -cp build BinFileWiz -w file.txt
 java -cp build BinFileWiz -w file.txt text_to_binary.dat
 ```
 
+## License
+
+This project is licensed under the **MIT License** - see the `LICENSE` file for details
 
