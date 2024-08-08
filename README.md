@@ -17,22 +17,40 @@ Make sure you have the latest version of the Java Development Kit installed. You
 git clone https://github.com/prebish/binary-file-wizard.git
 ```
 
-### 2. Move to program directory
+### 2. Compile the program
 ```sh
 cd ./binary-file-wizard
-```
-
-### 3. Compile the program
-```sh
-javac ./src/BinFileWiz.java
+javac ./src/*.java
 ```
 
 ## Usage
 
-### 1. Move to program directory
+### Running the program
+
+This is the baseline of what you'll use to run the program. Try running it yourself.  
+Note that the usage will print out when there are insufficient arguments.
+
 ```sh
-cd ./binary-file-wizard/src/
+java -cp build BinFileWiz
 ```
-### 2. Compile the program
+
+### Reading
+
+#### The output will be displayed in the console
+```sh
+java -cp build BinFileWiz -r text.txt 
+```
+
+#### Optionally, you can include a name of a file to place the output
+```sh
+java -cp build BinFileWiz -r text.txt  
+```
+
+### Writing
+```sh
+java
+```
+
+### Writing
 
 
