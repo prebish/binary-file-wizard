@@ -19,8 +19,13 @@ git clone https://github.com/prebish/binary-file-wizard.git
 
 ### 2. Move to program directory
 ```sh
+cd ./binary-file-wizard
+```
 
-
+### 3. Compile the program
+```sh
+javac ./src/BinFileWiz.java
+```
 
 ## Usage
 
