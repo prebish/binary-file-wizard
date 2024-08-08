@@ -8,14 +8,26 @@ A simple command line Java program that can read most binary files, or turn a fi
 - [Installation](#installation)
 - [Usage](#usage)
 
-## Installation
+## Installation & Setup
 
-1. Clone the repository
+Make sure you have the latest version of the Java Development Kit installed. You can download it [<u>here</u>](https://www.oracle.com/java/technologies/downloads/)
+
+### 1. Clone the repository
 ```sh
 git clone https://github.com/prebish/binary-file-wizard.git
 ```
 
-2. 
+### 2. Move to program directory
+```sh
+
+
 
 ## Usage
+
+### 1. Move to program directory
+```sh
+cd ./binary-file-wizard/src/
+```
+### 2. Compile the program
+
 
