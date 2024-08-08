@@ -49,7 +49,6 @@ public class BinFileWiz {
     }
 
     public static void readData(String inputFilename, String outputFilename) throws FileNotFoundException, IOException {
-        System.out.println("Reading from: " + inputFilename);
         FileInputStream fis = new FileInputStream(inputFilename);
         DataInputStream dis = new DataInputStream(fis);
         BufferedWriter bw = null;
