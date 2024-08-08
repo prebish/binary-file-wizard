@@ -28,7 +28,7 @@ git clone https://github.com/prebish/binary-file-wizard.git
 ### 2. Compile the Program
 ```bash
 cd ./binary-file-wizard
-javac ./src/*.java
+javac -d build ./src/*.java
 ```
 
 ## Usage
