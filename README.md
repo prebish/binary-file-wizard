@@ -9,11 +9,7 @@ A simple command line Java program that can read most binary files, or turn a fi
     2. [Compile the Program](#2-compile-the-program)
 - [Usage](#usage)
     - [Reading](#reading)
-        - [Output to Console](#the-output-will-be-displayed-in-the-console)
-        - [Output to File](#optionally-you-can-include-a-name-of-a-file-to-place-the-output)
     - [Writing](#writing)
-        - [No Output File Specified](#the-output-will-be-placed-in-a-file-named-outputdat-by-default)
-        - [Output File Specified](#optionally-a-custom-output-file-name-can-be-included)
 - [License](#license)
 
 ## Installation & Setup
