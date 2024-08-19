@@ -14,7 +14,8 @@ A simple command line Java program that can read most binary files, or turn a fi
 
 ## Installation & Setup
 
-Make sure you have the latest version of the Java Development Kit installed. You can download it [<u>here</u>](https://www.oracle.com/java/technologies/downloads/)
+Make sure you have the latest version of the Java Development Kit installed.  
+You can download it [<u>**here**</u>](https://www.oracle.com/java/technologies/downloads/)
 
 ### 1. Clone the Repository
 ```bash
