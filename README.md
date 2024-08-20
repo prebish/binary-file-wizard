@@ -2,7 +2,7 @@
 
 A simple command line Java program that can read most binary files, or turn a file into a `.dat` file.
 
-## Table of Contents
+### Table of Contents
 
 - [Installation & Setup](#installation--setup)
     1. [Clone the Repository](#1-clone-the-repository)
